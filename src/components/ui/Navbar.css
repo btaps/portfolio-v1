@@ -1,0 +1,19 @@
+.navbar{
+  /*width: 50%;*/
+}
+
+.navbar ol{
+  list-style: none;
+  display: flex;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  -moz-box-align: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar a{
+  color: #FFF;
+  text-decoration: none;
+}

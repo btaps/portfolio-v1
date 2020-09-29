@@ -1,0 +1,13 @@
+.feTurbulence{
+  transform: scale(1);
+}
+
+.svg-container__polygon{
+  filter: url("#displacementFilter");
+  transform: scale(1);
+}
+
+#B{
+  opacity: 0;
+}
+
