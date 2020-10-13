@@ -1,26 +1,34 @@
-html,
-body,
-header {
-  background-color: #252423;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@300&display=swap');
 
 body {
+  /*background-color: #252423;*/
+  /*background-color: #5b9bbc;*/
+  background-color: #1399c2;
+  /*background-color: rgb(128,216,255);*/
+
+}
+body {
   margin: 0;
-  position: absolute;
+  /*position: absolute;*/
   width: 100%;
   height: 100%;
-  color: white;
+  color: #000;
+  /*font-family: 'Lora', serif;*/
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
-h1, h2, h3, h4, h5, h6{
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+*{
+  scroll-behavior: smooth !important;
 }
 
 #root{
   height: 100%;
+  /*width: 100%;*/
 }
 
 .flex{

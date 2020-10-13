@@ -37,8 +37,8 @@ const LogoSVG = () => {
     <div class="svg-attributes flex center">
       <svg
         id="hexagon"
-        width="125"
-        height="125"
+        width="200"
+        height="200"
         viewBox="0 0 140 140"
         border="solid white"
       >
@@ -60,14 +60,13 @@ const LogoSVG = () => {
         </filter>
         <g
           id="B"
-          transform="translate(36, 33)"
           fill="#fff"
           font-size="30"
           font-weight="400"
           letter-spacing="4.16666603"
         >
           <text>
-            <tspan x="-18" y="40">
+            <tspan x="14" y="76">
               Bruno
             </tspan>
           </text>
@@ -75,7 +74,9 @@ const LogoSVG = () => {
         <polygon
           className="svg-container__polygon"
           fill="none"
-          stroke="#5b9bbc"
+          //stroke="#5b9bbc"
+          //stroke="#3b656e"
+          stroke="#84dee3"
           stroke-width="3"
           points="64 68.64 8.574 100 63.446 67.68 64 4 64.554 67.68 119.426 100"
         />

@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
 
+import Main from "../components/Main.js";
+
 import Routes from "./Routes";
-import Intro from "../components/Intro";
 
 function App() {
   //setTimeout(() => {
@@ -10,9 +11,9 @@ function App() {
   //}, 2800);
 
   return (
-    <React.Fragment>
-      <Intro />
-    </React.Fragment>
+    <Routes>
+      <Main />
+    </Routes>
   );
 }
 
