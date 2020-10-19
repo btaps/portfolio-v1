@@ -1,7 +1,7 @@
 .header-container{
   height: 100vh;
   /*background:radial-gradient(#050526 0%,black 90%) -20vw 10vh no-repeat black;*/
-  background:radial-gradient(#050526 10%,black 70%) 0vw 0vh no-repeat black;
+  //background:radial-gradient(#050526 10%,black 70%) 0vw 0vh no-repeat black;
   //margin:0;
   //padding:0;
   //width:100vw;
@@ -12,11 +12,32 @@
   overflow: hidden;
 }
 
+@keyframes crawl {
+	0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+	100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
 .hc__h2{
+  animation: crawl;
   margin: 1rem;
   opacity: 0;
   font-size: 2rem;
   color: #fff;
+  font-family: 'Star Wars';
+  letter-spacing: .6rem;
+}
+.ic__h2-software{
+  transform: skewX(-10deg);
+}
+
+.ic__h2-engineer{
+  transform: skewX(10deg);
 }
 
 .intro-svg-container{

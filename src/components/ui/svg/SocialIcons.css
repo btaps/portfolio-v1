@@ -1,0 +1,26 @@
+.social-links{
+  position: fixed;
+  bottom: 0;
+}
+
+.social-links ul{
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.social-links li{
+  padding: .5rem 0;
+}
+
+.social-links a{
+  outline: none;
+}
+
+.social-links svg{
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.social-links svg:hover{
+  fill: #7ea3bd;
+  transform: translateY(-5px);
+}

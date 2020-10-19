@@ -1,5 +1,5 @@
 .about{
-  background-color: #fff;
+  /*background-color: #fff;*/
   padding: 3rem 0;
 }
 
@@ -10,11 +10,12 @@
 }
 
 section h3{
+  color: #c3d9e8;
   text-align: center;
   letter-spacing: 0.2rem;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin: 1rem;
-  font-weight: 100;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -23,13 +24,13 @@ section h3{
   width: 20rem;
   height: .2rem;
   padding: 0 !important;
-  background: #ccc;
+  background: #7ea3bd;
   margin-left: auto;
   margin-right: auto;
 }
 
-.sc-info-main{
-  margin: 2rem 0;
+.sc-main{
+  margin: 3rem 0;
 }
 
 .sc__info-container{
@@ -37,14 +38,11 @@ section h3{
 }
 
 .sc__header{
+  color: #c3d9e8;
   font-size: 1.3rem;
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 1rem;
-}
-
-.sc__info{
-
 }
 
 .sc__links{
@@ -56,6 +54,18 @@ section h3{
 
 .sc__link{
   padding: .7rem .25rem;
+}
+
+.sc__link a{
+  outline: none;
+}
+
+.sc__link svg{
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.sc__link svg:hover{
+  fill: #7ea3bd;
 }
 
 .Niners:hover{

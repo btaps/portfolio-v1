@@ -4,21 +4,26 @@ import anime from "animejs";
 
 const NameSVG = () => {
   useEffect(() => {
-    anime({
-      targets: "path",
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: "easeInOutSine",
-      duration: 1500,
-      delay: function (el, i) {
-        return i * 100;
-      },
-    });
+    //anime({
+    //targets: "path",
+    //strokeDashoffset: [anime.setDashoffset, 0],
+    //easing: "easeInOutSine",
+    //duration: 1500,
+    //delay: function (el, i) {
+    //return i * 100;
+    //},
+    //});
   }, []);
   return (
     <div id="lineDrawing" className="svg-container">
       <div className="svg-div">
-        <svg viewBox="0 0 330 100">
-          <g fill="none" fill-rule="evenodd" stroke="red" stroke-width="1">
+        <svg width="100" height="100" viewBox="0 0 330 100">
+          <g
+            fill="#7ea3bd"
+            fill-rule="evenodd"
+            stroke-width="1"
+            stroke="#7ea3bd"
+          >
             <path d="M60 30 q10 20, 20 50 l5 -5 q-10 -20, -20 -50 q-2 3, -4 3.5z" />
             <path d="M80 80 q-30 -45, -65 -55 q3 -5, 5 -8 c90 10, 90 20, 70 30 c30 5, 30 10, -10 40 q-2 -3, -7 -3 c42 -30, 30 -30, 8 -33 q2 -3, 1 -5 c20 -5, 15 -20, -54 -22 q45 20, 57 50" />
             <path d="M105 30 q10 20, 20 50 l5 -5 q-10 -20, -20 -55 q2 5, -5 10" />

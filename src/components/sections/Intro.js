@@ -25,7 +25,7 @@ const Intro = () => {
 
   useEffect(() => {
     anime({
-      targets: "path",
+      targets: ".isc__path",
       translateX: 30,
       delay: 3000,
       duration: 1500,
@@ -86,13 +86,20 @@ const Intro = () => {
               className="isc__path"
               //stroke="#5b9bbc"
               //stroke="#3b656e"
-              stroke="#84dee3"
-              strokeWidth="1.5"
+              stroke="#7ea3bd"
+              strokeWidth="1"
               d="M0 5 h140"
               style={{ transform: "translateX(-150px)" }}
             />
           </svg>
-          <h2 className="hc__h2">Software Engineer</h2>
+          <div className="flex">
+            <div className="ic__h2-software">
+              <h2 className="hc__h2">Software</h2>
+            </div>{" "}
+            <div className="ic__h2-engineer">
+              <h2 className="hc__h2">Engineer</h2>
+            </div>
+          </div>
         </div>
         <Navbar />
       </header>

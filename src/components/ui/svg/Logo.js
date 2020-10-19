@@ -62,11 +62,11 @@ const LogoSVG = () => {
           id="B"
           fill="#fff"
           font-size="30"
-          font-weight="400"
+          font-weight="800"
           letter-spacing="4.16666603"
         >
           <text>
-            <tspan x="14" y="76">
+            <tspan x="12" y="76">
               Bruno
             </tspan>
           </text>
@@ -76,8 +76,8 @@ const LogoSVG = () => {
           fill="none"
           //stroke="#5b9bbc"
           //stroke="#3b656e"
-          stroke="#84dee3"
-          stroke-width="3"
+          stroke="#7ea3bd"
+          stroke-width="1"
           points="64 68.64 8.574 100 63.446 67.68 64 4 64.554 67.68 119.426 100"
         />
       </svg>

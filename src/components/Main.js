@@ -2,11 +2,11 @@ import React from "react";
 
 import Intro from "./sections/Intro";
 import About from "./sections/About";
-import Experience from "./sections/Experience";
+import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
-import Projects from "./sections/Projects";
+import Experience from "./sections/Experience";
 
-import Test from "./intro-test";
+import SocialIcons from "./ui/svg/SocialIcons";
 
 import "./Main.css";
 
@@ -15,9 +15,10 @@ const Main = () => {
     <React.Fragment>
       <Intro />
       <About />
+      <Skills />
       <Experience />
-      <Projects />
       <Contact />
+      <SocialIcons />
     </React.Fragment>
   );
 };
