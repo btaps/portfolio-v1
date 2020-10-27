@@ -1,6 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@font-face{
+  font-family: 'Star Wars';
+  src: url("../../components/ui/fonts/Starjedi.ttf");
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'Inconsolata';
+  src: url("../../components/ui/fonts/Inconsolata-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'Open Sans';
+  src: url("../../components/ui/fonts/OpenSans-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'Source Sans Pro';
+  src: url("../../components/ui/fonts/SourceSansPro-Regular.ttf");
+  font-weight: normal;
+}
+
+$OpenSans: 'Open Sans', Arial, sans-serif;
+$StarWars: 'Star Wars', Arial, sans-serif;
+$SansPro: 'Source Sans Pro', Arial, sans-serif;
+$Inconsolata: 'Inconsolata', Arial, sans-serif;
 
 $font-color-big: #c3d9e8;
 $font-color-small: #7ea3bd;
