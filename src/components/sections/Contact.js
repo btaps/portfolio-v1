@@ -1,15 +1,15 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import "./Contact.css";
+import "./Contact.scss";
 
-const Contact = () => {
+const Contact = ({ blur }) => {
   const email = useSelector((state) => state.portfolio.email);
 
   return (
     <React.Fragment>
       <div id="contact"></div>
       <section className="contact">
-        <div className="section-container">
+        <div className={blur ? "section-container blur" : "section-container"}>
           <h3>Get In Touch</h3>
           <div className="sc__line"></div>
           <div className="sc-main flex column center">

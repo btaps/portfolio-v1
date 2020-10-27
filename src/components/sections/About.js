@@ -1,17 +1,18 @@
 import React from "react";
-import "./About.css";
 import ProfilePic from "../../images/profile-pic.jpg";
 import LinkedIn from "../ui/svg/LinkedIn";
 import GitHub from "../ui/svg/GitHub";
 import Facebook from "../ui/svg/Facebook";
 import GitLab from "../ui/svg/GitLab";
 
-const About = () => {
+import "./About.scss";
+
+const About = ({ blur }) => {
   return (
     <React.Fragment>
       <div id="about"></div>
       <section className="about">
-        <div className="section-container">
+        <div className={blur ? "section-container blur" : "section-container"}>
           <h3>About Me</h3>
           <div className="sc__line"></div>
           <div className="sc-main flex">
@@ -21,13 +22,13 @@ const About = () => {
             <div className="flex column">
               <div className="flex column sc__info-container">
                 <div className="sc__header">Hello!</div>
-                <div className="line-height">
+                <div className=" line-height sc__info">
                   I'm Bruno, a Software Engineer based in San Francisco, CA. In
-                  early 2019, I decided to change careers from being in the
-                  emergency medical field to becoming a engineer. That's when I
-                  decided to join a coding bootcamp in San Francisco. Since my
-                  bootcamp, I have gained great real world experience through
-                  two internships. During my time with the Moringa Fellowship as
+                  early 2019, I made a career change from being in the emergency
+                  medical field to becoming an engineer. That's when I decided
+                  to join a coding bootcamp in San Francisco. Since my bootcamp,
+                  I have gained great real world experience through two
+                  internships. During my time with the Moringa Fellowship as
                   well as Esports Development League, I was able to take charge
                   and be responsible for the frontend. Although most of my
                   experience in my internships has been in the frontend, I’m
@@ -77,12 +78,11 @@ const About = () => {
               </div>
               <div className="flex column sc__info-container">
                 <div className="sc__header">Life Outside of Coding</div>
-                <div className="line-height">
+                <div className="line-height sc__info">
                   When I'm not being a nerd infront of my computer, I tend to
                   spend most of my free time being a dad to my baby of six
                   months. Even though daddy duties are full time work, I try to
                   sneak in some time for playing a bit of League of Legends.
-                  Mostly when the baby is sleeping or we have a baby sitter.
                   Ever since the pandemic hit, my wife and I have started to
                   binge watch a lot of shows to pass the time. Some of my
                   favorites are "Hell's Kitchen", "The Simpsons", and "The King

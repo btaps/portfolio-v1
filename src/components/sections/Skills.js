@@ -1,12 +1,12 @@
 import React from "react";
-import "./Skills.css";
+import "./Skills.scss";
 
-const Skills = () => {
+const Skills = ({ blur }) => {
   return (
     <React.Fragment>
       <div id="skills"></div>
       <section className="skills">
-        <div className="section-container">
+        <div className={blur ? "section-container blur" : "section-container"}>
           <h3>Technical Skills</h3>
           <div className="sc__line"></div>
           <div className="sc-main flex column">

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Logo.css";
+import "./Logo.scss";
 
 import anime from "animejs";
 

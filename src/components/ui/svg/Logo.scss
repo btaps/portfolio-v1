@@ -1,0 +1,22 @@
+@import "../../../setup/utilities/variables.scss";
+
+.feTurbulence{
+  transform: scale(1);
+}
+
+.svg-container__polygon{
+  filter: url("#displacementFilter");
+  transform: scale(1);
+}
+
+#B{
+  opacity: 0;
+  /*font-family: 'Star Wars';*/
+  /*font-size: 1.4rem;*/
+}
+
+#B text tspan{
+  //font-family: $coding-font;
+  //text-transform: lowercase;
+}
+

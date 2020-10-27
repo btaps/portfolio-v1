@@ -1,6 +1,7 @@
 .social-links{
   position: fixed;
   bottom: 0;
+  z-index: 2;
 }
 
 .social-links ul{

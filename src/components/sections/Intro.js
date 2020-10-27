@@ -101,7 +101,7 @@ const Intro = () => {
             </div>
           </div>
         </div>
-        <Navbar />
+        <Navbar fade={true} />
       </header>
     </React.Fragment>
   );
