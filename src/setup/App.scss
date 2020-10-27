@@ -1,13 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@300&display=swap');
-
-@font-face{
-  font-family: 'Star Wars';
-  src: url(../components/ui/fonts/Starjedi.ttf);
-  font-weight: normal;
-}
-
-$font-small: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+@import "../setup/utilities/variables.scss";
 
 body {
   /*background-color: #252423;*/
@@ -29,7 +20,7 @@ body {
   font-weight: 100;
   /*font-family: 'Lora', serif;*/
   /*font-family: 'Open Sans', sans-serif;*/
-  font-family: $font-small;
+  font-family: $Sans-Pro;
   font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
