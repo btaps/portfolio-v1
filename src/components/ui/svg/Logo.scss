@@ -11,12 +11,13 @@
 
 #B{
   opacity: 0;
-  /*font-family: 'Star Wars';*/
-  /*font-size: 1.4rem;*/
 }
 
 #B text tspan{
-  //font-family: $coding-font;
+  //letter-spacing: normal;
+  font-family: $oxygen;
+  //font-family: $inconsolata;
   //text-transform: lowercase;
+  //text-transform: uppercase;
 }
 

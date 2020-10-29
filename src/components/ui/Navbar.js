@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import anime from "animejs";
-import LogoSVG from "../ui/svg/Name";
 
 import "./Navbar.scss";
 
@@ -11,7 +9,6 @@ const Navbar = ({ hide, fade }) => {
     const nav = document.querySelector("nav");
     const header = document.querySelector("header");
     const navOpacity = document.getElementById("nav-opacity");
-    const contactButton = document.querySelector(".nav__contact-button");
     let prevScrollpos = window.pageYOffset;
     setNavPosition(header.offsetHeight - 52);
 
@@ -35,30 +32,21 @@ const Navbar = ({ hide, fade }) => {
       const currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         nav.style.top = "0";
-        //contactButton.style.top
       } else {
         nav.style.top = "-3.5rem";
       }
       prevScrollpos = currentScrollPos;
+      console.log(window.pageYOffset);
     };
   }, [navPosition]);
 
   return (
     <React.Fragment>
-      {hide ? (
-        <a
-          className="email-me-sticky flex column center"
-          href="mailto:btapiasierra@outlook.com"
-        >
-          <div className="email__text ">Email Me</div>
-          <div className="email__line"></div>
-        </a>
-      ) : null}
       <nav
         className={hide ? "flex center navbar hidden" : "flex center navbar"}
         id={fade ? "nav-opacity" : null}
       >
-        <ol>
+        <ol className="flex">
           <li>
             <a href="/#about">About</a>
           </li>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Resume.css";
+import "./Resume.scss";
 import PDF from "../ui/Resume.pdf";
 
 const Resume = () => {

@@ -9,26 +9,22 @@
 }
 
 .sk-main-skill{
-  font-family: $coding-font;
+  font-family: $inconsolata;
 }
 
 .sk__pref-stack{
   justify-content: space-around;
   padding: 4rem 0;
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: $txt-medium;
+  font-weight: $bold;
   letter-spacing: 0.2rem;
 }
 
 .sk__skills-header{
   font-size: 1.3rem;
   align-self: center;
-  color: #c3d9e8;
+  color: $txt-secondary;
   padding-bottom: 2rem;
-}
-
-.sk__table-header{
-  color: #c3d9e8;
 }
 
 .sk__rest-skills ul{
@@ -41,6 +37,6 @@
   
 .sk__rest-skills ul li{
   margin-bottom: 10px;
-  font-family: $coding-font;
+  font-family: $inconsolata;
 }
 

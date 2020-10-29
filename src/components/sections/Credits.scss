@@ -1,2 +1,29 @@
 @import '../../setup/utilities/variables.scss';
 
+.credits{
+  font-family: $inconsolata;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  font-size: .9rem;
+  margin: 3rem 0;
+  transition: $fast;
+  outline: none;
+}
+
+.credits:hover{
+  color: $txt-secondary;
+}
+
+.credits-fork{
+  padding-left: .5rem;
+  transition: $fast;
+}
+
+.credits:hover svg{
+  fill: $txt-secondary
+}
+
+.fork-one{
+  padding-right: .5rem;
+}

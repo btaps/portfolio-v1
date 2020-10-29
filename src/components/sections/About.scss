@@ -1,7 +1,6 @@
 @import "../../setup/utilities/variables.scss";
 
 .about{
-  /*background-color: #fff;*/
   padding: 3rem 0;
 }
 
@@ -12,12 +11,12 @@
 }
 
 section h3{
-  color: #c3d9e8;
+  color: $txt-secondary;
   text-align: center;
   letter-spacing: 0.2rem;
-  font-size: 2.5rem;
+  font-size: $txt-big;
   margin: 1rem;
-  font-weight: 400;
+  font-weight: $normal;
   text-transform: uppercase;
 }
 
@@ -25,8 +24,8 @@ section h3{
   display: block;
   width: 20rem;
   height: .2rem;
-  padding: 0 !important;
-  background: #7ea3bd;
+  padding: 0;
+  background: $txt-primary;
   margin-left: auto;
   margin-right: auto;
 }
@@ -40,13 +39,13 @@ section h3{
 }
 
 .sc__info{
-  font-family: $coding-font;
+  font-family: $inconsolata;
 }
 
 .sc__header{
-  color: #c3d9e8;
-  font-size: 1.3rem;
-  font-weight: 400;
+  color: $txt-secondary;
+  font-size: $txt-medium;
+  font-weight: $normal;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -55,7 +54,6 @@ section h3{
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: flex;
   padding-top: 1rem;
 }
 
@@ -68,26 +66,9 @@ section h3{
 }
 
 .sc__link svg{
-  transition: all 0.3s ease-in-out 0s;
+  transition: $fast;
 }
 
 .sc__link svg:hover{
-  fill: #7ea3bd;
+  fill: $txt-primary;
 }
-
-.Niners:hover{
-  color: red;
-}
-.ml15 {
-  font-weight: 800;
-  /*font-size: 3.8em;*/
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  display: inline;
-}
-
-.ml15 .word {
-  display: inline-block;
-  /*line-height: 1em;*/
-}
-

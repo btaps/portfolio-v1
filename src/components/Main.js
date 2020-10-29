@@ -6,24 +6,30 @@ import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
 import Experience from "./sections/Experience";
+//import Projects from "./sections/Projects";
+import Credits from "./sections/Credits";
 
 import SocialIcons from "./ui/svg/SocialIcons";
+import ClickableEmail from "./ui/ClickableEmail";
 
-import "./Main.css";
+import "./Main.scss";
 
+/*
+ * NOTE: need to add so projects are included:
+ *          <Projects blur={blur ? true : false} />
+ */
 const Main = () => {
-  const exp1 = useSelector((state) => state.popup.exp1);
-  const exp2 = useSelector((state) => state.popup.exp2);
-  const exp3 = useSelector((state) => state.popup.exp3);
-
+  const blur = useSelector((state) => state.popup.blur);
   return (
     <React.Fragment>
       <Intro />
-      <About blur={exp1 || exp2 || exp3 ? true : false} />
-      <Skills blur={exp1 || exp2 || exp3 ? true : false} />
-      <Experience blur={exp1 || exp2 || exp3 ? true : false} />
-      <Contact blur={exp1 || exp2 || exp3 ? true : false} />
+      <About blur={blur ? true : false} />
+      <Skills blur={blur ? true : false} />
+      <Experience blur={blur ? true : false} />
+      <Contact blur={blur ? true : false} />
+      <Credits />
       <SocialIcons />
+      <ClickableEmail />
     </React.Fragment>
   );
 };

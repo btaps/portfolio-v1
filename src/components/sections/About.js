@@ -16,7 +16,7 @@ const About = ({ blur }) => {
           <h3>About Me</h3>
           <div className="sc__line"></div>
           <div className="sc-main flex">
-            <div className="sc__img-container">
+            <div className="sc__img-container flex center">
               <img src={ProfilePic} className="sc--img" alt="Profile pic" />
             </div>
             <div className="flex column">
@@ -34,7 +34,7 @@ const About = ({ blur }) => {
                   experience in my internships has been in the frontend, I’m
                   super comfortable jumping anywhere in the stack.
                 </div>
-                <ul className="sc__links">
+                <ul className="sc__links flex">
                   <li className="sc__link">
                     <a
                       href="https://github.com/btaps/"

@@ -1,47 +1,39 @@
 @import '../../setup/utilities/variables.scss';
 
 .contact{
-  /*background-color: #3b656e;*/
   padding: 3rem 0;
-  /*color: #fff;*/
-  font-weight: 100;
+  font-weight: $light;
 }
 
 .contact-text{
   text-align: center;
   max-width: 40rem;
-  font-family: $coding-font;
-}
-
-.contact-email{
-  color: #c3d9e8;
-  font-weight: 400;
-  font-size: 1.3rem;
-  font-family: $coding-font;
-  position: relative;
-  top: 2rem;
-}
-
-.contact-email:hover::before{
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-.contact-email::before{
-  content: "";
-  position: absolute;
-  width: 15.7rem;
-  height: .1rem;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out 0s;
+  font-family: $inconsolata;
 }
 
 .contact-email-link{
   text-decoration: none;
   outline: none;
+  border: 1px solid $white;
+  border-radius: 5px;
+  padding: .7rem;
+  margin-top: 2rem;
+  transition: $fast;
+}
+
+.contact-email{
+  color: $white;
+  font-weight: $normal;
+  font-size: 1.5rem;
+  font-family: $inconsolata;
+  position: relative;
+  transition: $fast;
+}
+
+.contact-email-link:hover{
+  border: $txt-secondary 1px solid;
+  .contact-email{
+    color: $txt-secondary;
+  }
 }
 

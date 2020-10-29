@@ -1,0 +1,47 @@
+@import "../../setup/utilities/variables.scss";
+
+.email-me-sticky{
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  text-decoration: none;
+  transition: .2s ease-in-out;
+  outline: none; 
+  z-index: 2;
+}
+
+
+.email__text{
+  color: white;
+  text-transform: lowercase;
+  letter-spacing: 5px;
+  font-size: $txt-medium;
+  font-weight: 600;
+  font-family: $inconsolata;
+  transition: .2s ease-in-out;
+  writing-mode: vertical-lr;
+  margin: 0;
+  padding: 0 0 .3rem 0;
+}
+
+.email__line{
+  background: white;
+  height: 50px;
+  width: 2px;
+  z-index: 2;
+  margin: 0;
+  padding-top: 1rem;
+  transition: .2s ease-in-out;
+}
+
+.email-me-sticky:hover .email__line{
+  background-color: $txt-primary;
+}
+
+.email-me-sticky:hover .email__text{
+  color: $txt-primary;
+}
+
+.email-me-sticky:hover{
+  transform: translateY(-5px);
+}

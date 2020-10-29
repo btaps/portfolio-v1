@@ -1,35 +1,46 @@
 @font-face{
   font-family: 'Star Wars';
-  src: url("../../components/ui/fonts/Starjedi.ttf");
+  src: url("./fonts/Starjedi.ttf");
   font-weight: normal;
 }
 
 @font-face{
   font-family: 'Inconsolata';
-  src: url("../../components/ui/fonts/Inconsolata-Regular.ttf");
+  src: url("./fonts/Inconsolata-Regular.ttf");
   font-weight: normal;
 }
 
 @font-face{
-  font-family: 'Open Sans';
-  src: url("../../components/ui/fonts/OpenSans-Regular.ttf");
+  font-family: 'Oxygen';
+  src: url("./fonts/Oxygen-Regular.ttf");
   font-weight: normal;
 }
 
-@font-face{
-  font-family: 'Source Sans Pro';
-  src: url("../../components/ui/fonts/SourceSansPro-Regular.ttf");
-  font-weight: normal;
-}
+$star-wars: 'Star Wars', Arial, sans-serif;
+$inconsolata: 'Inconsolata', Arial, sans-serif;
+$oxygen: 'Oxygen', Arial, sans-serif;
 
-$Open-Sans: 'Open Sans', Arial, sans-serif;
-$Star-Wars: 'Star Wars', Arial, sans-serif;
-$Sans-Pro: 'Source Sans Pro', Arial, sans-serif;
-$Inconsolata: 'Inconsolata', Arial, sans-serif;
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
 
-$font-color-big: #c3d9e8;
-$font-color-small: #7ea3bd;
+$txt-primary: #7ea3bd;
+$txt-secondary: #c3d9e8;
 
-$font-size-small: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$txt-small: 1rem;
+$txt-medium: 1.7rem;
+$txt-big: 2.5rem;
 
-$coding-font: 'Inconsolata', monospace;
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+
+$white: #FFFF;
+$black: #000;
+$background: #050526;
+
+$fast: all 0.3s ease-in-out 0s; 
+
+

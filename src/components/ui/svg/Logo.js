@@ -65,17 +65,13 @@ const LogoSVG = () => {
           font-weight="800"
           letter-spacing="4.16666603"
         >
-          <text>
-            <tspan x="12" y="76">
-              Bruno
-            </tspan>
+          <text y="75" transform="translate(65)">
+            <tspan text-anchor="middle">Bruno</tspan>
           </text>
         </g>
         <polygon
           className="svg-container__polygon"
           fill="none"
-          //stroke="#5b9bbc"
-          //stroke="#3b656e"
           stroke="#7ea3bd"
           stroke-width="1"
           points="64 68.64 8.574 100 63.446 67.68 64 4 64.554 67.68 119.426 100"

@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setExp1 } from "../../setup/store/popup";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setBlur } from "../../setup/store/popup";
+
 import Cafecito1 from "../../images/Cafecito-1.png";
 import Cafecito2 from "../../images/Cafecito-2.png";
 import Cafecito3 from "../../images/Cafecito-3.png";
@@ -36,27 +37,15 @@ const images3 = [eCommerce1, eCommerce2, eCommerce3, eCommerce4, eCommerce5];
 
 function returnImage(imageArr, idx) {
   return (
-    <img className="exp__img1" src={imageArr[idx]} alt="Cafecito experience" />
+    <img className="exp__img" src={imageArr[idx]} alt="Cafecito experience" />
   );
 }
 
 const Experience = ({ blur }) => {
   const dispatch = useDispatch();
-  const exp1 = useSelector((state) => state.popup.exp1);
-  const [expOne, setExpOne] = useState(false);
+  const [showSlideShow, setShowSlideShow] = useState(false);
   const [slideShow, setSlideShow] = useState(new Array(0));
   const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    console.log(slideShow);
-    //console.log(exp1);
-    //if (exp1) {
-    //const body = document.querySelector("#root");
-    //console.log(body);
-    ////body.style.filter = "blur(4px)"
-    //}
-    //console.log(blur);
-  }, [exp1, blur]);
 
   return (
     <React.Fragment>
@@ -107,8 +96,8 @@ const Experience = ({ blur }) => {
               <div className="jc__svg-div">
                 <svg
                   onClick={() => {
-                    setExpOne(true);
-                    dispatch(setExp1(true));
+                    setShowSlideShow(true);
+                    dispatch(setBlur(true));
                     setSlideShow(images1);
                   }}
                   stroke="#fff"
@@ -162,8 +151,8 @@ const Experience = ({ blur }) => {
               <div className="jc__svg-div">
                 <svg
                   onClick={() => {
-                    setExpOne(true);
-                    dispatch(setExp1(true));
+                    setShowSlideShow(true);
+                    dispatch(setBlur(true));
                     setSlideShow(images2);
                   }}
                   stroke="#fff"
@@ -191,7 +180,7 @@ const Experience = ({ blur }) => {
                 Software Engineer{" "}
                 <a
                   className="jc__job-link"
-                  href="/"
+                  href="https://www.instagram.com/2720miles/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -219,8 +208,8 @@ const Experience = ({ blur }) => {
               <div className="jc__svg-div">
                 <svg
                   onClick={() => {
-                    setExpOne(true);
-                    dispatch(setExp1(true));
+                    setShowSlideShow(true);
+                    dispatch(setBlur(true));
                     setSlideShow(images3);
                   }}
                   stroke="#fff"
@@ -247,11 +236,11 @@ const Experience = ({ blur }) => {
         </div>
       </section>
       <div
-        //onClick={() => {
-        //setExpOne(false);
-        //dispatch(setExp1(false));
-        //}}
-        className={expOne ? "pop-up-div pop-up-div--show" : "pop-up-div"}
+        className={
+          showSlideShow
+            ? "pop-up-div flex center pop-up-div--show"
+            : "pop-up-div flex center"
+        }
       >
         <div className="left-arrow arrow">
           <svg
@@ -271,13 +260,14 @@ const Experience = ({ blur }) => {
             <path d="m268.15625-.0742188c-108.457031-.0195312-206.242188 65.3085938-247.746094 165.5117188-41.496094 100.207031-18.542968 215.542969 58.171875 292.210938 104.703125 104.703124 274.453125 104.703124 379.152344 0 104.699219-104.695313 104.699219-274.445313 0-379.148438-50.167969-50.453125-118.429687-78.746094-189.578125-78.5742188zm0 511.3554688c-134.074219 0-243.203125-109.132812-243.203125-243.207031s109.128906-243.203125 243.203125-243.203125 243.207031 109.128906 243.207031 243.203125-109.132812 243.207031-243.207031 243.207031zm0 0" />
           </svg>
         </div>
-        <div className="exp">
+        <div className="exp flex column center">
           <svg
             className="close"
             onClick={() => {
-              setExpOne(false);
-              dispatch(setExp1(false));
+              setShowSlideShow(false);
+              dispatch(setBlur(false));
               setIndex(0);
+              setSlideShow(null);
             }}
             viewBox="0 0 128 128"
             width="40px"
@@ -293,7 +283,11 @@ const Experience = ({ blur }) => {
             <path d="M53.4,77.6c-0.8,0-1.5-0.3-2.1-0.9c-1.2-1.2-1.2-3.1,0-4.2l21.2-21.2c1.2-1.2,3.1-1.2,4.2,0c1.2,1.2,1.2,3.1,0,4.2L55.5,76.7C54.9,77.3,54.2,77.6,53.4,77.6z" />
             <path d="M74.6,77.6c-0.8,0-1.5-0.3-2.1-0.9L51.3,55.5c-1.2-1.2-1.2-3.1,0-4.2c1.2-1.2,3.1-1.2,4.2,0l21.2,21.2c1.2,1.2,1.2,3.1,0,4.2C76.1,77.3,75.4,77.6,74.6,77.6z" />
           </svg>
-          {returnImage(slideShow, index)}
+          {slideShow === null ? (
+            <h1>Loading...</h1>
+          ) : (
+            returnImage(slideShow, index)
+          )}
         </div>
         <div className="arrow">
           <svg
