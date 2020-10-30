@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setBlur } from "../../setup/store/popup";
 
-import Cafecito1 from "../../images/Cafecito-1.png";
-import Cafecito2 from "../../images/Cafecito-2.png";
-import Cafecito3 from "../../images/Cafecito-3.png";
-import Cafecito4 from "../../images/Cafecito-4.png";
-import Cafecito5 from "../../images/Cafecito-5.png";
-import Cafecito6 from "../../images/Cafecito-6.png";
+import Cafecito1 from "../../images/Cafecito-1.jpg";
+import Cafecito2 from "../../images/Cafecito-2.jpg";
+import Cafecito3 from "../../images/Cafecito-3.jpg";
+import Cafecito4 from "../../images/Cafecito-4.jpg";
+import Cafecito5 from "../../images/Cafecito-5.jpg";
+import Cafecito6 from "../../images/Cafecito-6.jpg";
 
-import ESDL1 from "../../images/ESDL-1.png";
-import ESDL2 from "../../images/ESDL-2.png";
-import ESDL3 from "../../images/ESDL-3.png";
-import ESDL4 from "../../images/ESDL-4.png";
+import ESDL1 from "../../images/ESDL-1.jpg";
+import ESDL2 from "../../images/ESDL-2.jpg";
+import ESDL3 from "../../images/ESDL-3.jpg";
+import ESDL4 from "../../images/ESDL-4.jpg";
 
-import eCommerce1 from "../../images/2720-1.png";
-import eCommerce2 from "../../images/2720-2.png";
-import eCommerce3 from "../../images/2720-3.png";
-import eCommerce4 from "../../images/2720-4.png";
-import eCommerce5 from "../../images/2720-6.png";
-//import eCommerce6 from "../../images/2720-6.png";
+import eCommerce1 from "../../images/2720-1.jpg";
+import eCommerce2 from "../../images/2720-2.jpg";
+import eCommerce3 from "../../images/2720-3.jpg";
+import eCommerce4 from "../../images/2720-4.jpg";
+import eCommerce5 from "../../images/2720-5.jpg";
+
 import "./Experience.scss";
 
 const images1 = [

@@ -14,10 +14,8 @@ const Contact = ({ blur }) => {
           <div className="sc__line"></div>
           <div className="sc-main flex column center">
             <div className="contact-text line-height">
-              One of my goals is to bring diversity into the tech field. If you
-              are looking for someone to help you build a website or join your
-              team, shoot me an email and lets chat. Would love to learn more
-              about it.
+              If you are looking for someone to help you build a website or join
+              your team, shoot me an email and lets chat.
             </div>
             <a
               className="contact-email-link"
