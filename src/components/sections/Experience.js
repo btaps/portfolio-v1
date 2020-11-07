@@ -179,7 +179,7 @@ const Experience = ({ blur }) => {
               <div className="jc__job-title">
                 Software Engineer{" "}
                 <a
-                  className="jc__job-link"
+                  className="jc__job-link jc--underline-4"
                   href="https://www.instagram.com/2720miles/"
                   target="_blank"
                   rel="noopener noreferrer"

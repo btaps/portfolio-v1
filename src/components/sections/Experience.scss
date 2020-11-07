@@ -69,6 +69,19 @@
   transition: $fast;
 }
 
+.jc--underline-4::before{
+  content: "";
+  position: absolute;
+  width: 6.2rem;
+  height: .1rem;
+  bottom: 0;
+  left: 10.2rem;
+  background-color: $white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: $fast;
+}
+
 .jc__date{
   font-size: .9rem;
   padding-top: 1.7rem;
