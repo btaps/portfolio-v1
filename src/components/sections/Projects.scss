@@ -1,0 +1,79 @@
+@import '../../setup/utilities/variables.scss';
+
+.projects{
+  padding: 3rem 0;
+  font-weight: $light;
+}
+
+.projects__grid-div{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  position: relative;
+  margin: 50px 50px 0 50px;
+  //margin-top: 50px;
+}
+
+.projects__project-div{
+  background-color: rgba(40,2,87,.4);
+  border-radius: 10px;
+}
+
+.project-inner{
+  padding: 2rem 1rem 2rem 1rem;
+  height: 90%;
+}
+
+.project-tech-stack{
+  list-style: outside none none;
+  padding: 0;
+}
+
+.project-tech-stack li:not(:last-of-type){
+  margin-right: 15px;
+}
+
+.project-tech-stack li{
+  font-family: $inconsolata;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.project-top{
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: flex-end;
+}
+
+.project-top a{
+  padding: 5px 5px;
+}
+
+.project-top svg{
+  transition: $fast;
+}
+
+.project-top .github:hover{
+  fill: #7ea3bd;
+  transform: translateY(-5px);
+}
+
+.project-top .external-link:hover{
+  stroke: #7ea3bd;
+  transform: translateY(-5px);
+}
+
+.project-title{
+  margin: 0px 0px 10px;
+  font-size: 22px;
+  color: $white;
+  text-align: left;
+  letter-spacing: 1px;
+  font-weight: $semibold;
+  text-transform: none;
+}
+
+.project-description{
+  color: $txt-secondary;
+  font-size: 15px;
+}

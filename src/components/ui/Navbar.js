@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 
 import "./Navbar.scss";
 
-const Navbar = ({ hide, fade }) => {
+const Navbar = ({hide, fade}) => {
   const [navPosition, setNavPosition] = useState(675);
 
   useEffect(() => {
@@ -36,7 +36,6 @@ const Navbar = ({ hide, fade }) => {
         nav.style.top = "-3.5rem";
       }
       prevScrollpos = currentScrollPos;
-      console.log(window.pageYOffset);
     };
   }, [navPosition]);
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Skills.scss";
 
-const Skills = ({ blur }) => {
+const Skills = ({blur}) => {
   return (
     <React.Fragment>
       <div id="skills"></div>
