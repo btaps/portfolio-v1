@@ -138,7 +138,7 @@ const Projects = ({blur}) => {
                     <div className="project-description">
                       <p>
                         Used my skills in React and Redux to create my portfolio.
-                        I decided to give it an outer space look to it, influenced
+                        I decided to give it an outer space look, influenced
                         from my love of the Star Wars movies. Used namecheap.com
                         to purchase a domain and got it hosted on Netlify.
                     </p>
