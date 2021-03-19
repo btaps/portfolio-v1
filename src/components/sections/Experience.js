@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { setBlur } from "../../setup/store/popup";
+import React, {useState} from "react";
+import {useDispatch} from "react-redux";
+import {setBlur} from "../../setup/store/popup";
 
 import Cafecito1 from "../../images/Cafecito-1.jpg";
 import Cafecito2 from "../../images/Cafecito-2.jpg";
@@ -41,195 +41,210 @@ function returnImage(imageArr, idx) {
   );
 }
 
-const Experience = ({ blur }) => {
+const Experience = ({blur}) => {
   const dispatch = useDispatch();
   const [showSlideShow, setShowSlideShow] = useState(false);
   const [slideShow, setSlideShow] = useState(new Array(0));
   const [index, setIndex] = useState(0);
+  const [isVisible, setVisible] = React.useState(true);
+  const domRef = React.useRef();
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
 
   return (
     <React.Fragment>
       <div id="experience"></div>
       <section className="experience">
-        <div className={blur ? "section-container blur" : "section-container"}>
-          <h3>Experience</h3>
-          <div className="sc__line"></div>
-          <div className="sc-main experience-div flex row wrap">
-            <div className="job-container flex column">
-              <div className="jc__job-title">
-                Software Engineer Fellow{" "}
-                <a
-                  className="jc__job-link jc--underline-1"
-                  href="https://www.moringafellowship.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @Moringa Fellowship
+        <div
+          className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+          ref={domRef}
+        >
+          <div className={blur ? "section-container blur" : "section-container"}>
+            <h3>Experience</h3>
+            <div className="sc__line"></div>
+            <div className="sc-main experience-div flex row wrap">
+              <div className="job-container flex column">
+                <div className="jc__job-title">
+                  Software Engineer Fellow{" "}
+                  <a
+                    className="jc__job-link jc--underline-1"
+                    href="https://www.moringafellowship.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @Moringa Fellowship
                 </a>{" "}
-                <a
-                  className="jc__job-link jc--underline-2"
-                  href="https://meetcafecito.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @Cafecito
+                  <a
+                    className="jc__job-link jc--underline-2"
+                    href="https://meetcafecito.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @Cafecito
                 </a>
-              </div>
-              <div className="jc__date">July 2020 - September 2020</div>
-              <div className="jc__job-bullets">
-                <ul>
-                  <li className="jc__job-duties line-height">
-                    Maintained and improved frontend React code by working with
-                    the design team to create a new UI.
+                </div>
+                <div className="jc__date">July 2020 - September 2020</div>
+                <div className="jc__job-bullets">
+                  <ul>
+                    <li className="jc__job-duties line-height">
+                      Maintained and improved frontend React code by working with
+                      the design team to create a new UI.
                   </li>
-                  <li className="jc__job-duties line-height">
-                    Was the sole engineer in charge of all frontend changes for
-                    this project.
+                    <li className="jc__job-duties line-height">
+                      Was the sole engineer in charge of all frontend changes for
+                      this project.
                   </li>
-                  <li className="jc__job-duties line-height">
-                    Followed contributing guidelines such as BEM CSS, making
-                    proper API calls, and using ESLint to write codeon top of
-                    Cafecito’s legacy code.
+                    <li className="jc__job-duties line-height">
+                      Followed contributing guidelines such as BEM CSS, making
+                      proper API calls, and using ESLint to write codeon top of
+                      Cafecito’s legacy code.
                   </li>
-                </ul>
+                  </ul>
+                </div>
+                <div className="jc__svg-div">
+                  <svg
+                    onClick={() => {
+                      setShowSlideShow(true);
+                      dispatch(setBlur(true));
+                      setSlideShow(images1);
+                    }}
+                    stroke="#fff"
+                    viewBox="0 0 50 50"
+                    width="25px"
+                    height="25px"
+                  >
+                    <path
+                      fill="none"
+                      stroke-miterlimit="10"
+                      stroke-width="2"
+                      d="M5.001,45h36.488c1.453,0,2.698-1.042,2.953-2.473L49,17c0-1.104-0.896-2-2-2H10c-1.104,0-2,0.896-2,2L3.032,42.648C2.813,43.874,3.755,45,5.001,45z"
+                    />
+                    <path
+                      fill="none"
+                      stroke-miterlimit="10"
+                      stroke-width="2"
+                      d="M44,12v-1c0-1.105-0.895-2-2-2H18c-1.469,0-2.484-4-4-4H5C3.895,5,3,5.895,3,7v36"
+                    />
+                  </svg>
+                </div>
               </div>
-              <div className="jc__svg-div">
-                <svg
-                  onClick={() => {
-                    setShowSlideShow(true);
-                    dispatch(setBlur(true));
-                    setSlideShow(images1);
-                  }}
-                  stroke="#fff"
-                  viewBox="0 0 50 50"
-                  width="25px"
-                  height="25px"
-                >
-                  <path
-                    fill="none"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
-                    d="M5.001,45h36.488c1.453,0,2.698-1.042,2.953-2.473L49,17c0-1.104-0.896-2-2-2H10c-1.104,0-2,0.896-2,2L3.032,42.648C2.813,43.874,3.755,45,5.001,45z"
-                  />
-                  <path
-                    fill="none"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
-                    d="M44,12v-1c0-1.105-0.895-2-2-2H18c-1.469,0-2.484-4-4-4H5C3.895,5,3,5.895,3,7v36"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div className="job-container flex column">
-              <div className="jc__job-title">
-                Frontend Developer Intern{" "}
-                <a
-                  className="jc__job-link jc--underline-3"
-                  href="https://www.esdleague.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @Esports Development League
+              <div className="job-container flex column">
+                <div className="jc__job-title">
+                  Frontend Developer Intern{" "}
+                  <a
+                    className="jc__job-link jc--underline-3"
+                    href="https://www.esdleague.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @Esports Development League
                 </a>{" "}
-              </div>
-              <div className="jc__date">May 2020 - August 2020</div>
-              <div className="jc__job-bullets">
-                <ul>
-                  <li className="jc__job-duties line-height">
-                    Worked closely with the CEO and CTO to create a UI giving
-                    admins the ability to rearrange teams by drag and drop using
-                    Sortable.js.
+                </div>
+                <div className="jc__date">May 2020 - August 2020</div>
+                <div className="jc__job-bullets">
+                  <ul>
+                    <li className="jc__job-duties line-height">
+                      Worked closely with the CEO and CTO to create a UI giving
+                      admins the ability to rearrange teams by drag and drop using
+                      Sortable.js.
                   </li>
-                  <li className="jc__job-duties line-height">
-                    Manipulated large amounts of data coming in JSON format.
+                    <li className="jc__job-duties line-height">
+                      Manipulated large amounts of data coming in JSON format.
                   </li>
-                  <li className="jc__job-duties line-height">
-                    Built the UI using React frontend.
+                    <li className="jc__job-duties line-height">
+                      Built the UI using React frontend.
                   </li>
-                </ul>
+                  </ul>
+                </div>
+                <div className="jc__svg-div">
+                  <svg
+                    onClick={() => {
+                      setShowSlideShow(true);
+                      dispatch(setBlur(true));
+                      setSlideShow(images2);
+                    }}
+                    stroke="#fff"
+                    viewBox="0 0 50 50"
+                    width="25px"
+                    height="25px"
+                  >
+                    <path
+                      fill="none"
+                      stroke-miterlimit="10"
+                      stroke-width="2"
+                      d="M5.001,45h36.488c1.453,0,2.698-1.042,2.953-2.473L49,17c0-1.104-0.896-2-2-2H10c-1.104,0-2,0.896-2,2L3.032,42.648C2.813,43.874,3.755,45,5.001,45z"
+                    />
+                    <path
+                      fill="none"
+                      stroke-miterlimit="10"
+                      stroke-width="2"
+                      d="M44,12v-1c0-1.105-0.895-2-2-2H18c-1.469,0-2.484-4-4-4H5C3.895,5,3,5.895,3,7v36"
+                    />
+                  </svg>
+                </div>
               </div>
-              <div className="jc__svg-div">
-                <svg
-                  onClick={() => {
-                    setShowSlideShow(true);
-                    dispatch(setBlur(true));
-                    setSlideShow(images2);
-                  }}
-                  stroke="#fff"
-                  viewBox="0 0 50 50"
-                  width="25px"
-                  height="25px"
-                >
-                  <path
-                    fill="none"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
-                    d="M5.001,45h36.488c1.453,0,2.698-1.042,2.953-2.473L49,17c0-1.104-0.896-2-2-2H10c-1.104,0-2,0.896-2,2L3.032,42.648C2.813,43.874,3.755,45,5.001,45z"
-                  />
-                  <path
-                    fill="none"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
-                    d="M44,12v-1c0-1.105-0.895-2-2-2H18c-1.469,0-2.484-4-4-4H5C3.895,5,3,5.895,3,7v36"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div className="job-container flex column">
-              <div className="jc__job-title">
-                Software Engineer{" "}
-                <a
-                  className="jc__job-link jc--underline-4"
-                  href="https://www.instagram.com/2720miles/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @2720miles
+              <div className="job-container flex column">
+                <div className="jc__job-title">
+                  Software Engineer{" "}
+                  <a
+                    className="jc__job-link jc--underline-4"
+                    href="https://www.instagram.com/2720miles/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @2720miles
                 </a>
-              </div>
-              <div className="jc__date">December 2019 - March 2020</div>
-              <div className="jc__job-bullets">
-                <ul>
-                  <li className="jc__job-duties line-height">
-                    Single handedly worked with the company to build a full
-                    stack eCommerce web app using React, JavaScript, Node,
-                    Express, PostgreSQL, and AWS S3.
+                </div>
+                <div className="jc__date">December 2019 - March 2020</div>
+                <div className="jc__job-bullets">
+                  <ul>
+                    <li className="jc__job-duties line-height">
+                      Single handedly worked with the company to build a full
+                      stack eCommerce web app using React, JavaScript, Node,
+                      Express, PostgreSQL, and AWS S3.
                   </li>
-                  <li className="jc__job-duties line-height">
-                    Hosted the application in a Virtual Machine on a
-                    DigitalOcean droplet.
+                    <li className="jc__job-duties line-height">
+                      Hosted the application in a Virtual Machine on a
+                      DigitalOcean droplet.
                   </li>
-                  <li className="jc__job-duties line-height">
-                    Used Paypal API’s to securely allow a payment process from
-                    customer to client.
+                    <li className="jc__job-duties line-height">
+                      Used Paypal API’s to securely allow a payment process from
+                      customer to client.
                   </li>
-                </ul>
-              </div>
-              <div className="jc__svg-div">
-                <svg
-                  onClick={() => {
-                    setShowSlideShow(true);
-                    dispatch(setBlur(true));
-                    setSlideShow(images3);
-                  }}
-                  stroke="#fff"
-                  viewBox="0 0 50 50"
-                  width="25px"
-                  height="25px"
-                >
-                  <path
-                    fill="none"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
-                    d="M5.001,45h36.488c1.453,0,2.698-1.042,2.953-2.473L49,17c0-1.104-0.896-2-2-2H10c-1.104,0-2,0.896-2,2L3.032,42.648C2.813,43.874,3.755,45,5.001,45z"
-                  />
-                  <path
-                    fill="none"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
-                    d="M44,12v-1c0-1.105-0.895-2-2-2H18c-1.469,0-2.484-4-4-4H5C3.895,5,3,5.895,3,7v36"
-                  />
-                </svg>
+                  </ul>
+                </div>
+                <div className="jc__svg-div">
+                  <svg
+                    onClick={() => {
+                      setShowSlideShow(true);
+                      dispatch(setBlur(true));
+                      setSlideShow(images3);
+                    }}
+                    stroke="#fff"
+                    viewBox="0 0 50 50"
+                    width="25px"
+                    height="25px"
+                  >
+                    <path
+                      fill="none"
+                      stroke-miterlimit="10"
+                      stroke-width="2"
+                      d="M5.001,45h36.488c1.453,0,2.698-1.042,2.953-2.473L49,17c0-1.104-0.896-2-2-2H10c-1.104,0-2,0.896-2,2L3.032,42.648C2.813,43.874,3.755,45,5.001,45z"
+                    />
+                    <path
+                      fill="none"
+                      stroke-miterlimit="10"
+                      stroke-width="2"
+                      d="M44,12v-1c0-1.105-0.895-2-2-2H18c-1.469,0-2.484-4-4-4H5C3.895,5,3,5.895,3,7v36"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -286,8 +301,8 @@ const Experience = ({ blur }) => {
           {slideShow === null ? (
             <h1>Loading...</h1>
           ) : (
-            returnImage(slideShow, index)
-          )}
+              returnImage(slideShow, index)
+            )}
         </div>
         <div className="arrow">
           <svg

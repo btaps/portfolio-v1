@@ -4,7 +4,6 @@ import "./SocialIcons.css";
 import GitHub from "./GitHub";
 import LinkedIn from "./LinkedIn";
 import Facebook from "./Facebook";
-import GitLab from "./GitLab";
 
 const SocialLogos = () => {
   return (
@@ -18,15 +17,6 @@ const SocialLogos = () => {
               rel="noopener noreferrer"
             >
               <GitHub />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://gitlab.com/btaps/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GitLab />
             </a>
           </li>
           <li>

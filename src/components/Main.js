@@ -15,15 +15,16 @@ import ClickableEmail from "./ui/ClickableEmail";
 import "./Main.scss";
 
 const Main = () => {
-  const blur = useSelector((state) => state.popup.blur);
+  const hide = useSelector((state) => state.popup.blur);
+
   return (
     <React.Fragment>
       <Intro />
-      <About blur={blur ? true : false} />
-      <Skills blur={blur ? true : false} />
-      <Experience blur={blur ? true : false} />
-      <Projects blur={blur ? true : false} />
-      <Contact blur={blur ? true : false} />
+      <About blur={hide ? true : false} />
+      <Skills blur={hide ? true : false} />
+      <Experience blur={hide ? true : false} />
+      <Projects blur={hide ? true : false} />
+      <Contact blur={hide ? true : false} />
       <Credits />
       <SocialIcons />
       <ClickableEmail />
