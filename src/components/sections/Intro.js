@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 
 import Logo from "../ui/svg/Logo";
 import Navbar from "../ui/Navbar";
@@ -39,7 +39,7 @@ const Intro = () => {
               stroke="#7ea3bd"
               strokeWidth="1"
               d="M0 5 h140"
-              style={{ transform: "translateX(-150px)" }}
+              style={{transform: "translateX(-150px)"}}
             />
           </svg>
           <div className="flex">

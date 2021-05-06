@@ -80,14 +80,14 @@ const Projects = ({blur}) => {
                     <div className="project-top flex">
                       <div className="project-links">
                         <a
-                          href="#"
+                          href="https://github.com/btaps/netflix-clone"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <GitHub />
                         </a>
                         <a
-                          href="#"
+                          href="https://netflix-4a21f.web.app/"
                           target="_blank"
                           rel="noopener noreferrer"
                         >

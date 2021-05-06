@@ -92,19 +92,9 @@ const Experience = ({blur}) => {
                 <div className="jc__date">July 2020 - September 2020</div>
                 <div className="jc__job-bullets">
                   <ul>
-                    <li className="jc__job-duties line-height">
-                      Maintained and improved frontend React code by working with
-                      the design team to create a new UI.
-                  </li>
-                    <li className="jc__job-duties line-height">
-                      Was the sole engineer in charge of all frontend changes for
-                      this project.
-                  </li>
-                    <li className="jc__job-duties line-height">
-                      Followed contributing guidelines such as BEM CSS, making
-                      proper API calls, and using ESLint to write codeon top of
-                      Cafecito’s legacy code.
-                  </li>
+                    <li className="jc__job-duties line-height">Iterated with the design team to improve upon existing code and build out new features.</li>
+                    <li className="jc__job-duties line-height">Worked with a team of four engineers to develop product improvements from the ground up and implement them.</li>
+                    <li className="jc__job-duties line-height">Worked with frontend/backend legacy code and modernized it by conforming to current standards and writing tests.</li>
                   </ul>
                 </div>
                 <div className="jc__svg-div">
@@ -149,17 +139,8 @@ const Experience = ({blur}) => {
                 <div className="jc__date">May 2020 - August 2020</div>
                 <div className="jc__job-bullets">
                   <ul>
-                    <li className="jc__job-duties line-height">
-                      Worked closely with the CEO and CTO to create a UI giving
-                      admins the ability to rearrange teams by drag and drop using
-                      Sortable.js.
-                  </li>
-                    <li className="jc__job-duties line-height">
-                      Manipulated large amounts of data coming in JSON format.
-                  </li>
-                    <li className="jc__job-duties line-height">
-                      Built the UI using React frontend.
-                  </li>
+                    <li className="jc__job-duties line-height">Collaborated closely with the CEO and CTO to ship high quality JavaScript code using React.</li>
+                    <li className="jc__job-duties line-height">Manipulated large amounts of data coming in JSON format to facilitate the admins ability to adjust teams by building new features from the ground up.</li>
                   </ul>
                 </div>
                 <div className="jc__svg-div">
@@ -209,10 +190,7 @@ const Experience = ({blur}) => {
                       stack eCommerce web app using React, JavaScript, Node,
                       Express, PostgreSQL, and AWS S3.
                   </li>
-                    <li className="jc__job-duties line-height">
-                      Hosted the application in a Virtual Machine on a
-                      DigitalOcean droplet.
-                  </li>
+                    <li className="jc__job-duties line-height">Set up web hosting via Nginx on a Ubuntu virtual machine using DigitalOcean droplet server.</li>
                     <li className="jc__job-duties line-height">
                       Used Paypal API’s to securely allow a payment process from
                       customer to client.

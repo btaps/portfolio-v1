@@ -3,7 +3,6 @@ import ProfilePic from "../../images/profile-pic.jpg";
 import LinkedIn from "../ui/svg/LinkedIn";
 import GitHub from "../ui/svg/GitHub";
 import Facebook from "../ui/svg/Facebook";
-import GitLab from "../ui/svg/GitLab";
 
 import "./About.scss";
 
@@ -38,17 +37,7 @@ const About = ({blur}) => {
                 <div className="flex column sc__info-container">
                   <div className="sc__header">Hello!</div>
                   <div className=" line-height sc__info">
-                    I'm Bruno, a Software Engineer based in San Francisco, CA. In
-                    early 2019, I made a career change from being in the emergency
-                    medical field to becoming an engineer. That's when I decided
-                    to join a coding bootcamp in San Francisco. Since my bootcamp,
-                    I have gained great real world experience through two
-                    internships. During my time with the Moringa Fellowship as
-                    well as Esports Development League, I was able to take charge
-                    and be responsible for the frontend. Although most of my
-                    experience in my internships has been in the frontend, I’m
-                    super comfortable jumping anywhere in the stack.
-                </div>
+                    I'm Bruno, a Software Engineer with a focus in the frontend of the stack. I love working on tough projects and seeing my work live on the internet! My goal is to build high quality websites, features, apps, or anything in between! </div>
                   <ul className="sc__links flex">
                     <li className="sc__link">
                       <a
@@ -58,15 +47,6 @@ const About = ({blur}) => {
                         rel="noopener noreferrer"
                       >
                         <GitHub />
-                      </a>
-                    </li>
-                    <li className="sc__link">
-                      <a
-                        href="https://gitlab.com/btaps/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <GitLab />
                       </a>
                     </li>
                     <li className="sc__link">
@@ -94,16 +74,7 @@ const About = ({blur}) => {
                 <div className="flex column sc__info-container">
                   <div className="sc__header">Life Outside of Coding</div>
                   <div className="line-height sc__info">
-                    When I'm not being a nerd infront of my computer, I tend to
-                    spend most of my free time being a dad to my baby of six
-                    months. Even though daddy duties are full time work, I try to
-                    sneak in some time for playing a bit of League of Legends.
-                    Ever since the pandemic hit, my wife and I have started to
-                    binge watch a lot of shows to pass the time. Some of my
-                    favorites are "Hell's Kitchen", "The Simpsons", and "The King
-                  of Queens". Ohh and Sundays are for football, go{" "}
-                    <span class="Nin">Nin</span>
-                    <span class="ers!">ers!</span>
+                    On a personal level, I have lived in the Bay Area for most of my life, but I was actually born in Peru and lived there until I was 7. I also just became a dad last year and that has definitely taught me to have patience, be humble, and enjoy life.
                   </div>
                 </div>
               </div>
